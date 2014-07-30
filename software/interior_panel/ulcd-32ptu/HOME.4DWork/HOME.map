@@ -1,0 +1,17 @@
+linked : 17    home 00B8
+linked : 16    update_datedisplay 02A8
+linked : 15    update_digitstemp 035F
+linked : 14    admin_numpad 0420
+linked : 13    update_digits 0543
+linked : 12    clear_code 057B
+linked : 11    KbHandler 05AF
+linked : 10    admin 06A2
+linked : 9     main 085D
+linked : 8     check_com 08E5
+skipped: 7     PrintDiskUnicode ----
+linked : 6     PrintDisk 0A11
+linked : 5     kbUp 0A5F
+linked : 4     setkeystate 0AED
+linked : 3     kbDown 0B06
+linked : 2     refreshstate 0CFD
+linked : 1     ledDigitsDisplay 0DC7

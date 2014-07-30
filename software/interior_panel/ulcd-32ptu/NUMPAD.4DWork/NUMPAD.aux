@@ -1,0 +1,261 @@
+==============================================================
+==============================================================
+4DGL Compiler 2.7.0.9 -- Copyright 2004-2012 4D Labs
+** C:\Users\Macropodre\Documents\HouseManager\electronics\screen\NUMPAD.4dg
+compiled Thu Feb 27 20:20:01 2014
+
+==============================================================
+==============================================================
+
+
+No Ref for file
+[LINKING]
+function 12, main, address 116
+(main entry point)
+stack usage 0 + 4
+function 'main' requires no arguments
+function 'main' has no return value
+
+[LINKING]
+function 11, menu, address 153
+stack usage 8 + 4
+function 'menu' requires no arguments
+function 'menu' has no return value
+
+[LINKING]
+function 10, numpad, address 422
+stack usage 6 + 4
+function 'numpad' requires no arguments
+function 'numpad' has no return value
+
+[LINKING]
+function 9, update, address 814
+stack usage 0 + 4
+function 'update' requires no arguments
+function 'update' has no return value
+
+[LINKING]
+function 8, KbHandler, address 870
+stack usage 4 + 4
+function 'KbHandler' requires 1 argument
+function 'KbHandler' has no return value
+
+[LINKING]
+function 7, ledDigitsDisplay, address 1014
+stack usage 8 + 4
+function 'ledDigitsDisplay' requires 7 argument
+function 'ledDigitsDisplay' has no return value
+
+[LINKING]
+function 4, kbUp, address 1211
+stack usage 0 + 4
+function 'kbUp' requires 2 argument
+function 'kbUp' has no return value
+
+[LINKING]
+function 3, setkeystate, address 1353
+stack usage 0 + 4
+function 'setkeystate' requires 2 argument
+function 'setkeystate' has no return value
+
+[LINKING]
+function 2, kbDown, address 1378
+stack usage 2 + 4
+function 'kbDown' requires 5 argument
+function 'kbDown' has no return value
+
+[LINKING]
+function 1, refreshstate, address 1881
+stack usage 2 + 4
+function 'refreshstate' requires 2 argument
+function 'refreshstate' has no return value
+
+[RESERVED WORDS]
+#inherit
+#LISTCODE
+#MODE
+#STACK
+#OPTIMIZE_ON
+#OPTIMIZE_OFF
+byte
+word
+dword
+float
+private
+#IF
+#IFNOT
+#ELSE
+#ENDIF
+#CONST
+#constant
+#USE
+USING
+func
+endfunc
+var
+#STOP
+#DATA
+#ASM
+#END
+#platform
+EXISTS
+#ERROR
+#MESSAGE
+#NOTICE
+sizeof
+argcount
+if
+else
+endif
+while
+wend
+repeat
+until
+forever
+return
+break
+continue
+for
+next
+switch
+case
+default
+endswitch
+print
+goto
+gosub
+endsub
+mcall
+lookup8
+lookup16
+
+[MACRO]
+
+[CONSTANTS]
+__MAXMEM                          00003840      14400  (usage 1)
+__MAXPROG                         00003840      14400  (usage 1)
+BLACK                             00000000          0  (usage 3)
+DIGITS                            00000004          4  (usage 6)
+I_STAYONTOP                       00000100        256  (usage 3)
+I_TOUCH_DISABLE                   00000020         32  (usage 6)
+ibtnBack                          00000000          0  (usage 27)
+ikeyboard1                        00000000          0  (usage 24)
+iledCode                          0000000D         13  (usage 9)
+IMAGE_FLAGS                       00000006          6  (usage 6)
+IMAGE_INDEX                       00000009          9  (usage 12)
+IMAGE_XPOS                        00000002          2  (usage 3)
+KbButtons                         0000000A         10  (usage 12)
+KbCaps                            00000004          4  (usage 12)
+KbCapsBit                         00000002          2  (usage 12)
+KbCtrl1                           00000007          7  (usage 12)
+KbCtrl2                           00000008          8  (usage 12)
+KbCtrlBit                         00000004          4  (usage 21)
+KbDown                            00000000          0  (usage 12)
+KbIgn                             00000003          3  (usage 18)
+KbLock                            00000009          9  (usage 6)
+KbMvt                             00000001          1  (usage 18)
+KbShift1                          00000005          5  (usage 6)
+KbShift2                          00000006          6  (usage 6)
+KbShiftBit                        00000001          1  (usage 18)
+KbShiftCaps                       0000000B         11  (usage 3)
+KbShiftCapsBits                   00000003          3  (usage 18)
+KbState                           00000002          2  (usage 63)
+PICASO                            00000001          1  (usage 3)
+PORTRAIT                          00000002          2  (usage 3)
+SCREEN_MODE                       00000017         23  (usage 3)
+SOLID                             00000000          0  (usage 3)
+TOUCH_ENABLE                      00000000          0  (usage 6)
+TOUCH_GETX                        00000001          1  (usage 12)
+TOUCH_GETY                        00000002          2  (usage 12)
+TOUCH_MOVING                      00000003          3  (usage 6)
+TOUCH_PRESSED                     00000001          1  (usage 6)
+TOUCH_RELEASED                    00000002          2  (usage 6)
+TOUCH_STATUS                      00000000          0  (usage 6)
+
+[PmmC FUNCTIONS]
+file_GetC                         FFFFFF0E        -242  args=1 r=1  (usage 2)
+file_GetW                         FFFFFF0C        -244  args=1 r=1  (usage 2)
+file_LoadImageControl             FFFFFF04        -252  args=3 r=1  (usage 6)
+file_Seek                         FFFFFF16        -234  args=3 r=1  (usage 4)
+gfx_Cls                           FFFFFFCD         -51  args=0 r=0  (usage 6)
+gfx_PenSize                       FFFFFFA5         -91  args=1 r=1  (usage 3)
+gfx_Rectangle                     FFFFFFC5         -59  args=5 r=0  (usage 3)
+gfx_Set                           FFFFFFCE         -50  args=2 r=0  (usage 3)
+img_ClearAttributes               FFFFFF45        -187  args=3 r=1  (usage 3)
+img_GetWord                       FFFFFF48        -184  args=3 r=1  (usage 3)
+img_SetWord                       FFFFFF49        -183  args=4 r=1  (usage 18)
+img_Show                          FFFFFF47        -185  args=2 r=1  (usage 24)
+img_Touched                       FFFFFF44        -188  args=2 r=1  (usage 6)
+mem_Free                          FFFFFF24        -220  args=1 r=1  (usage 6)
+putch                             FFFFFFFE          -2  args=1 r=0  (usage 4)
+touch_Get                         FFFFFF37        -201  args=1 r=1  (usage 30)
+touch_Set                         FFFFFF38        -200  args=1 r=0  (usage 6)
+uadd_3232                         FFFFFEDE        -290  args=3 r=1  (usage 4)
+umul_1616                         FFFFFEDF        -289  args=3 r=1  (usage 4)
+
+[USER FUNCTIONS]
+kbDown                            00000562  args=5 r=0  (usage 3)
+KbHandler                         00000366  args=1 r=0  (usage 3)
+kbUp                              000004BB  args=2 r=0  (usage 3)
+ledDigitsDisplay                  000003F6  args=7 r=0  (usage 6)
+menu                              00000099  args=0 r=0  (usage 3)
+numpad                            000001A6  args=0 r=0  (usage 3)
+refreshstate                      00000759  args=2 r=0  (usage 9)
+setkeystate                       00000549  args=2 r=0  (usage 33)
+update                            0000032E  args=0 r=0  (usage 6)
+
+[GLOBAL VARIABLES]
+code                                  19  word[5]   (usage 12)
+command                               25  word       (usage 6)
+form                                  26  word       (usage 13)
+hndl                                   2  word       (usage 70)
+k                                     17  word       (usage 24)
+menu_exit                             27  word       (usage 9)
+numpad_exit                           24  word       (usage 9)
+okeyboard1                             3  word[12]   (usage 15)
+value                                 18  word       (usage 18)
+x                                     15  word       (usage 7)
+y                                     16  word       (usage 7)
+
+[PRIVATE VARIABLES]
+
+[DATA]
+0007: 07 08 09 04 05 06 01 02 03 6E 00 64 FF FF 00 00     .........n.dÿÿ..
+0017: 00 00 00 00 00 00 FF 00 FF 00 FF 00 FF 00 FF 00     ......ÿ.ÿ.ÿ.ÿ.ÿ.
+0027: 0C 00 00 00 6E 75 6D 70 61 64 00 6D 65 6E 75 00     ....numpad.menu.
+0037: 4D 45 4E 55 2E 64 61 74 00 4D 45 4E 55 2E 67 63     MENU.dat.MENU.gc
+0047: 69 00 62 61 63 6B 00 4E 55 4D 50 41 44 2E 64 61     i.back.NUMPAD.da
+0057: 74 00 4E 55 4D 50 41 44 2E 67 63 69 00              t.NUMPAD.gci.
+
+[__MAXPROG]
+14400
+[__MAXMEM]
+14400
+
+[PROGRAM]
+main
+[CODESIZE]
+2083
+[MEMSIZE]
+27
+[ARGCOUNT]
+0
+[RETURNS]
+NO
+[STACKSIZE]
+1500
+[STACK_ESTIMATE]
+78   (nb:- worst case estimate)
+[MODE]
+0
+
+[PROJECT]
+C:\Users\Macropodre\Documents\HouseManager\electronics\screen\NUMPAD.4dg
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\uLCD-32PTU.fnc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\PicasoFunctions.fnc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\4DGL_16bitColours.fnc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\VisualConst.inc
+C:\Users\Macropodre\Documents\HouseManager\electronics\screen\NUMPAD.4DWork\NUMPADConst.inc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\KBRoutines.inc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\PrintDisk.inc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\LEDDIGITSDISPLAY.inc

@@ -1,0 +1,73 @@
+﻿Version     0.0
+Platform    uLCD-32PT-P
+PlatRes     240x320
+Depends
+end
+Options
+    Visualizer
+    Speed                        0
+    Checksum                     No
+    ResponseSize                 0
+    Multidrop                    No
+    Destination                  0
+    SndBuf                       0
+end
+Form
+    Name                         form1
+    Bgtype                       Color
+    Color                        BLACK
+    Image                        (None)
+    Source.Height                0
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 0
+    OnActivate                   ''
+    OnCreate                     ''
+    OnRepeat                     ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+Keyboard
+    Name                         keyboard1
+    AutoCapsDisplay              Yes
+    Fill                         (Default)
+    Font.Color                   BLACK
+    Font.Effects                 []
+    Font.Name                    Tahoma
+    Font.Size                    15
+    Font.Style                   []
+    Height                       236
+    HighlightCaps                BLACK
+    KeyboardType                 KB1
+    KeyDistance                  0
+    Left                         0
+    SmallFont.Color              BLACK
+    SmallFont.Effects            []
+    SmallFont.Name               Tahoma
+    SmallFont.Size               15
+    SmallFont.Style              []
+    Top                          84
+    Visible                      Yes
+    Width                        320
+    OnChanged                    ''
+end
+LedDigits
+    Name                         ledCode
+    Color                        BLACK
+    Decimals                     0
+    Digits                       4
+    Height                       55
+    LeadingZero                  No
+    Left                         40
+    OutlineColor                 BLACK
+    Palette.High                 GOLD
+    Palette.Low                  BLACK
+    Top                          16
+    Visible                      No
+    Width                        161
+    OnChanged                    ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end

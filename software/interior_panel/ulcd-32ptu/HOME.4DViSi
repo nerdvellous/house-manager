@@ -1,0 +1,167 @@
+﻿Version     0.0
+Platform    uLCD-32PTU-P
+PlatRes     240x320
+Depends
+end
+Options
+    Visualizer
+    Speed                        9600
+    Checksum                     No
+    ResponseSize                 2
+    Multidrop                    No
+    Destination                  0
+    SndBuf                       0
+end
+Form
+    Name                         Form1
+    Bgtype                       Color
+    Color                        BLACK
+    Image                        (None)
+    Source.Height                0
+    Source.Left                  0
+    Source.Top                   0
+    Source.Width                 0
+    OnActivate                   ''
+    OnCreate                     ''
+    OnRepeat                     ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+LedDigits
+    Name                         digitsTemp
+    Color                        BLACK
+    Decimals                     0
+    Digits                       2
+    Height                       33
+    LeadingZero                  No
+    Left                         135
+    OutlineColor                 BLACK
+    Palette.High                 0xFF9933
+    Palette.Low                  BLACK
+    Top                          272
+    Visible                      Yes
+    Width                        54
+    OnChanged                    ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+LedDigits
+    Name                         digitsHour
+    Color                        BLACK
+    Decimals                     0
+    Digits                       2
+    Height                       56
+    LeadingZero                  Yes
+    Left                         20
+    OutlineColor                 BLACK
+    Palette.High                 WHITE
+    Palette.Low                  BLACK
+    Top                          20
+    Visible                      Yes
+    Width                        88
+    OnChanged                    ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+LedDigits
+    Name                         digitsMinute
+    Color                        BLACK
+    Decimals                     0
+    Digits                       2
+    Height                       56
+    LeadingZero                  Yes
+    Left                         140
+    OutlineColor                 BLACK
+    Palette.High                 WHITE
+    Palette.Low                  BLACK
+    Top                          20
+    Visible                      Yes
+    Width                        88
+    OnChanged                    ''
+    OnTouchMoving                ''
+    OnTouchPressed               ''
+    OnTouchReleased              ''
+end
+StaticText
+    Name                         lblTimeSeparator
+    AutoSize                     Yes
+    Caption                      :
+    Color                        clMoneyGreen
+    Font.Color                   WHITE
+    Font.Effects                 []
+    Font.Name                    'Arial Rounded MT Bold'
+    Font.Size                    28
+    Font.Style                   []
+    Height                       43
+    Left                         115
+    Top                          24
+    Transparent                  Yes
+    Visible                      Yes
+    Width                        12
+    WordWrap                     Yes
+end
+StaticText
+    Name                         lblTemp
+    AutoSize                     Yes
+    Caption                      °C
+    Color                        BLACK
+    Font.Color                   0xFF9933
+    Font.Effects                 []
+    Font.Name                    'Arial Unicode MS'
+    Font.Size                    26
+    Font.Style                   []
+    Height                       46
+    Left                         192
+    Top                          264
+    Transparent                  Yes
+    Visible                      Yes
+    Width                        39
+    WordWrap                     Yes
+end
+Strings
+    Name                         strDay
+    Alignment                    Left
+    BGcolor                      BLACK
+    Height                       20
+    FGcolor                      WHITE
+    Font.Bold                    Yes
+    Font.CharSet                 ANSI
+    Font.Italic                  No
+    Font.Name                    Arial
+    Font.Opaque                  Yes
+    Font.Size                    19
+    Font.Strikethrough           No
+    Font.Underline               No
+    Left                         20
+    Strings                      Lundi\nMardi\nMercredi\nJeudi\nVendredi\nSamedi\nDimanche\n
+    StringsStyle                 Message
+    Top                          270
+    Visible                      Yes
+    Width                        85
+    OnChanged                    ''
+end
+Strings
+    Name                         strAlarm
+    Alignment                    Center
+    BGcolor                      BLACK
+    Height                       23
+    FGcolor                      RED
+    Font.Bold                    Yes
+    Font.CharSet                 ANSI
+    Font.Italic                  No
+    Font.Name                    Arial
+    Font.Opaque                  Yes
+    Font.Size                    21
+    Font.Strikethrough           No
+    Font.Underline               No
+    Left                         0
+    Strings                      'ALARME DESACTIVEE\nALARME ACTIVEE\n'
+    StringsStyle                 Message
+    Top                          148
+    Visible                      Yes
+    Width                        240
+    OnChanged                    ''
+end

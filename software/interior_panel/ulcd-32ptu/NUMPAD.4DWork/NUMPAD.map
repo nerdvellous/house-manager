@@ -1,0 +1,12 @@
+linked : 12    main 0064
+linked : 11    menu 0099
+linked : 10    numpad 01A6
+linked : 9     update 032E
+linked : 8     KbHandler 0366
+linked : 7     ledDigitsDisplay 03F6
+skipped: 6     PrintDiskUnicode ----
+skipped: 5     PrintDisk ----
+linked : 4     kbUp 04BB
+linked : 3     setkeystate 0549
+linked : 2     kbDown 0562
+linked : 1     refreshstate 0759

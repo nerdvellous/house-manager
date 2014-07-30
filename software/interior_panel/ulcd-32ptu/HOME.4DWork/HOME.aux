@@ -1,0 +1,350 @@
+==============================================================
+==============================================================
+4DGL Compiler 2.7.0.9 -- Copyright 2004-2012 4D Labs
+** C:\Users\Macropodre\Documents\HouseManager\electronics\screen\HOME.4dg
+compiled Sat Mar 15 23:33:23 2014
+
+==============================================================
+==============================================================
+
+
+No Ref for file
+[LINKING]
+function 17, home, address 184
+stack usage 8 + 4
+function 'home' requires no arguments
+function 'home' has no return value
+
+[LINKING]
+function 16, update_datedisplay, address 680
+stack usage 0 + 4
+function 'update_datedisplay' requires no arguments
+function 'update_datedisplay' has no return value
+
+[LINKING]
+function 15, update_digitstemp, address 863
+stack usage 12 + 4
+function 'update_digitstemp' requires no arguments
+function 'update_digitstemp' has no return value
+
+[LINKING]
+function 14, admin_numpad, address 1056
+stack usage 10 + 4
+function 'admin_numpad' requires no arguments
+function 'admin_numpad' has no return value
+
+[LINKING]
+function 13, update_digits, address 1347
+stack usage 0 + 4
+function 'update_digits' requires no arguments
+function 'update_digits' has no return value
+
+[LINKING]
+function 12, clear_code, address 1403
+stack usage 2 + 4
+function 'clear_code' requires no arguments
+function 'clear_code' has no return value
+
+[LINKING]
+function 11, KbHandler, address 1455
+stack usage 4 + 4
+function 'KbHandler' requires 1 argument
+function 'KbHandler' has no return value
+
+[LINKING]
+function 10, admin, address 1698
+stack usage 10 + 4
+function 'admin' requires no arguments
+function 'admin' has no return value
+
+[LINKING]
+function 9, main, address 2223
+(main entry point)
+stack usage 0 + 4
+function 'main' requires no arguments
+function 'main' has no return value
+
+[LINKING]
+function 8, check_com, address 2277
+stack usage 2 + 4
+function 'check_com' requires no arguments
+function 'check_com' has no return value
+
+[LINKING]
+function 6, PrintDisk, address 2577
+stack usage 10 + 4
+function 'PrintDisk' requires 5 argument
+function 'PrintDisk' has no return value
+
+[LINKING]
+function 5, kbUp, address 2655
+stack usage 0 + 4
+function 'kbUp' requires 2 argument
+function 'kbUp' has no return value
+
+[LINKING]
+function 4, setkeystate, address 2797
+stack usage 0 + 4
+function 'setkeystate' requires 2 argument
+function 'setkeystate' has no return value
+
+[LINKING]
+function 3, kbDown, address 2822
+stack usage 2 + 4
+function 'kbDown' requires 5 argument
+function 'kbDown' has no return value
+
+[LINKING]
+function 2, refreshstate, address 3325
+stack usage 2 + 4
+function 'refreshstate' requires 2 argument
+function 'refreshstate' has no return value
+
+[LINKING]
+function 1, ledDigitsDisplay, address 3527
+stack usage 8 + 4
+function 'ledDigitsDisplay' requires 7 argument
+function 'ledDigitsDisplay' has no return value
+
+[RESERVED WORDS]
+#inherit
+#LISTCODE
+#MODE
+#STACK
+#OPTIMIZE_ON
+#OPTIMIZE_OFF
+byte
+word
+dword
+float
+private
+#IF
+#IFNOT
+#ELSE
+#ENDIF
+#CONST
+#constant
+#USE
+USING
+func
+endfunc
+var
+#STOP
+#DATA
+#ASM
+#END
+#platform
+EXISTS
+#ERROR
+#MESSAGE
+#NOTICE
+sizeof
+argcount
+if
+else
+endif
+while
+wend
+repeat
+until
+forever
+return
+break
+continue
+for
+next
+switch
+case
+default
+endswitch
+print
+goto
+gosub
+endsub
+mcall
+lookup8
+lookup16
+
+[MACRO]
+
+[CONSTANTS]
+__MAXMEM                          00003840      14400  (usage 1)
+__MAXPROG                         00003840      14400  (usage 1)
+BLACK                             00000000          0  (usage 15)
+DIGITS                            00000004          4  (usage 9)
+FONT1                             00000000          0  (usage 9)
+GREEN                             00000400       1024  (usage 3)
+I_STAYONTOP                       00000100        256  (usage 3)
+I_TOUCH_DISABLE                   00000020         32  (usage 12)
+ibtnAdd                           00000002          2  (usage 24)
+ibtnBack                          00000000          0  (usage 24)
+ibtnClear                         00000001          1  (usage 24)
+idigitsHour                       00000002          2  (usage 6)
+idigitsMinute                     00000004          4  (usage 6)
+idigitsTemp                       00000000          0  (usage 6)
+ikeyboard1                        00000000          0  (usage 24)
+ilblTemp                          00000007          7  (usage 3)
+ilblTimeSeparator                 00000006          6  (usage 3)
+iledCode                          0000000D         13  (usage 3)
+IMAGE_FLAGS                       00000006          6  (usage 6)
+IMAGE_INDEX                       00000009          9  (usage 24)
+IMAGE_XPOS                        00000002          2  (usage 3)
+KbButtons                         0000000A         10  (usage 12)
+KbCaps                            00000004          4  (usage 12)
+KbCapsBit                         00000002          2  (usage 12)
+KbCtrl1                           00000007          7  (usage 12)
+KbCtrl2                           00000008          8  (usage 12)
+KbCtrlBit                         00000004          4  (usage 21)
+KbDown                            00000000          0  (usage 12)
+KbIgn                             00000003          3  (usage 18)
+KbLock                            00000009          9  (usage 6)
+KbMvt                             00000001          1  (usage 18)
+KbShift1                          00000005          5  (usage 6)
+KbShift2                          00000006          6  (usage 6)
+KbShiftBit                        00000001          1  (usage 18)
+KbShiftCaps                       0000000B         11  (usage 3)
+KbShiftCapsBits                   00000003          3  (usage 18)
+KbState                           00000002          2  (usage 63)
+PICASO                            00000001          1  (usage 3)
+RED                               0000F800      63488  (usage 6)
+SOLID                             00000000          0  (usage 15)
+strAlarmSize                      00000016         22  (usage 3)
+strAlarmStartH                    00000000          0  (usage 3)
+strAlarmStartL                    00000200        512  (usage 3)
+strDaySize                        00000009          9  (usage 3)
+strDayStartH                      00000000          0  (usage 3)
+strDayStartL                      00000000          0  (usage 3)
+TEXT_COLOUR                       00000000          0  (usage 6)
+TOUCH_GETX                        00000001          1  (usage 18)
+TOUCH_GETY                        00000002          2  (usage 18)
+TOUCH_MOVING                      00000003          3  (usage 9)
+TOUCH_PRESSED                     00000001          1  (usage 9)
+TOUCH_RELEASED                    00000002          2  (usage 9)
+TOUCH_STATUS                      00000000          0  (usage 9)
+WHITE                             0000FFFF      65535  (usage 3)
+
+[PmmC FUNCTIONS]
+file_Close                        FFFFFF18        -232  args=1 r=1  (usage 3)
+file_GetC                         FFFFFF0E        -242  args=1 r=1  (usage 3)
+file_GetW                         FFFFFF0C        -244  args=1 r=1  (usage 2)
+file_LoadImageControl             FFFFFF04        -252  args=3 r=1  (usage 15)
+file_Open                         FFFFFF19        -231  args=2 r=1  (usage 3)
+file_Seek                         FFFFFF16        -234  args=3 r=1  (usage 5)
+gfx_Cls                           FFFFFFCD         -51  args=0 r=0  (usage 9)
+gfx_MoveTo                        FFFFFFCC         -52  args=2 r=0  (usage 9)
+gfx_PenSize                       FFFFFFA5         -91  args=1 r=1  (usage 15)
+gfx_Rectangle                     FFFFFFC5         -59  args=5 r=0  (usage 15)
+img_ClearAttributes               FFFFFF45        -187  args=3 r=1  (usage 9)
+img_GetWord                       FFFFFF48        -184  args=3 r=1  (usage 3)
+img_SetWord                       FFFFFF49        -183  args=4 r=1  (usage 30)
+img_Show                          FFFFFF47        -185  args=2 r=1  (usage 42)
+img_Touched                       FFFFFF44        -188  args=2 r=1  (usage 9)
+mem_Free                          FFFFFF24        -220  args=1 r=1  (usage 15)
+pause                             FFFFFFFA          -6  args=1 r=0  (usage 3)
+putch                             FFFFFFFE          -2  args=1 r=0  (usage 17)
+putstr                            FFFFFFF7          -9  args=1 r=1  (usage 6)
+serin                             FFFFFFFF          -1  args=0 r=1  (usage 3)
+serout                            FFFFFFFD          -3  args=1 r=0  (usage 6)
+touch_Get                         FFFFFF37        -201  args=1 r=1  (usage 45)
+txt_BGcolour                      FFFFFFE6         -26  args=1 r=1  (usage 6)
+txt_FGcolour                      FFFFFFE7         -25  args=1 r=1  (usage 6)
+txt_FontID                        FFFFFFE5         -27  args=1 r=1  (usage 15)
+txt_MoveCursor                    FFFFFFE9         -23  args=2 r=0  (usage 6)
+txt_Set                           FFFFFFE8         -24  args=2 r=0  (usage 6)
+uadd_3232                         FFFFFEDE        -290  args=3 r=1  (usage 5)
+umul_1616                         FFFFFEDF        -289  args=3 r=1  (usage 5)
+
+[USER FUNCTIONS]
+admin                             000006A2  args=0 r=0  (usage 3)
+admin_numpad                      00000420  args=0 r=0  (usage 3)
+check_com                         000008E5  args=0 r=0  (usage 9)
+clear_code                        0000057B  args=0 r=0  (usage 6)
+home                              000000B8  args=0 r=0  (usage 3)
+kbDown                            00000B06  args=5 r=0  (usage 3)
+KbHandler                         000005AF  args=1 r=0  (usage 3)
+kbUp                              00000A5F  args=2 r=0  (usage 3)
+ledDigitsDisplay                  00000DC7  args=7 r=0  (usage 21)
+PrintDisk                         00000A11  args=5 r=0  (usage 6)
+refreshstate                      00000CFD  args=2 r=0  (usage 9)
+setkeystate                       00000AED  args=2 r=0  (usage 33)
+update_datedisplay                000002A8  args=0 r=0  (usage 6)
+update_digits                     00000543  args=0 r=0  (usage 6)
+update_digitstemp                 0000035F  args=0 r=0  (usage 6)
+
+[GLOBAL VARIABLES]
+code                                  39  word[5]   (usage 12)
+code_value                            38  word       (usage 21)
+com_state                              9  word       (usage 10)
+command                                6  word       (usage 34)
+command_form                          11  word       (usage 6)
+day                                   18  word       (usage 10)
+day_of_week                           17  word       (usage 7)
+exit_admin                            14  word       (usage 9)
+exit_adminnumpad                      13  word       (usage 12)
+exit_home                             12  word       (usage 9)
+form                                  10  word       (usage 22)
+hFont1                                 3  word       (usage 9)
+hFont2                                 4  word       (usage 9)
+hndl                                   2  word       (usage 115)
+hour                                  15  word       (usage 10)
+hstrings                               5  word       (usage 12)
+k                                     37  word       (usage 27)
+minute                                16  word       (usage 10)
+month                                 19  word       (usage 10)
+okeyboard1                            25  word[12]   (usage 15)
+temp                                  21  word       (usage 13)
+update                                 8  word       (usage 10)
+update_date                           23  word       (usage 18)
+update_temp                           24  word       (usage 9)
+update_time                           22  word       (usage 12)
+value                                  7  word       (usage 28)
+year                                  20  word       (usage 7)
+
+[PRIVATE VARIABLES]
+
+[DATA]
+0007: 07 08 09 04 05 06 01 02 03 6E 00 64 FF FF 00 00     .........n.dÿÿ..
+0017: 00 00 00 00 00 00 FF 00 FF 00 FF 00 FF 00 FF 00     ......ÿ.ÿ.ÿ.ÿ.ÿ.
+0027: 0C 00 00 00 48 4F 4D 45 2E 64 61 31 00 48 4F 4D     ....HOME.da1.HOM
+0037: 45 2E 67 63 31 00 48 4F 4D 45 2E 64 61 32 00 48     E.gc1.HOME.da2.H
+0047: 4F 4D 45 2E 67 63 32 00 48 4F 4D 45 2E 74 78 66     OME.gc2.HOME.txf
+0057: 00 48 4F 4D 45 2E 64 61 74 00 48 4F 4D 45 2E 67     .HOME.dat.HOME.g
+0067: 63 69 00 61 64 6D 69 6E 6E 75 6D 70 61 64 00 4E     ci.adminnumpad.N
+0077: 55 4D 50 41 44 2E 64 61 74 00 4E 55 4D 50 41 44     UMPAD.dat.NUMPAD
+0087: 2E 67 63 69 00 68 6F 6D 65 00 43 6F 64 65 20 65     .gci.home.Code e
+0097: 72 72 6F 6E 65 00 61 64 6D 69 6E 00 4D 45 4E 55     rrone.admin.MENU
+00A7: 2E 64 61 74 00 4D 45 4E 55 2E 67 63 69 00 4F 4B     .dat.MENU.gci.OK
+00B7: 00                                                  .
+
+[__MAXPROG]
+14400
+[__MAXMEM]
+14400
+
+[PROGRAM]
+main
+[CODESIZE]
+3724
+[MEMSIZE]
+43
+[ARGCOUNT]
+0
+[RETURNS]
+NO
+[STACKSIZE]
+0 (AUTO)
+[STACK_ESTIMATE]
+138   (nb:- worst case estimate)
+[MODE]
+0
+
+[PROJECT]
+C:\Users\Macropodre\Documents\HouseManager\electronics\screen\HOME.4dg
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\uLCD-32PTU.fnc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\PicasoFunctions.fnc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\4DGL_16bitColours.fnc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\VisualConst.inc
+C:\Users\Macropodre\Documents\HouseManager\electronics\screen\HOME.4DWork\HOMEConst.inc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\LEDDIGITSDISPLAY.inc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\KBRoutines.inc
+C:\Program Files (x86)\4D Labs\4D Workshop 4 IDE\include\PrintDisk.inc
