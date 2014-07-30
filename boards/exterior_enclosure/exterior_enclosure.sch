@@ -1463,7 +1463,7 @@ Standard A4 size frame in Landscape</description>
 <part name="GND4" library="nerdvellous_schematics" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="nerdvellous_schematics" deviceset="5V" device=""/>
 <part name="FRAME1" library="nerdvellous_schematics" deviceset="FRAME-A4L" device="">
-<attribute name="CNAME" value="RFID READER SCHEMATICS"/>
+<attribute name="CNAME" value="EXTERIOR ENCLOSURE SCHEMATIC"/>
 <attribute name="CREVISION" value="1.0"/>
 <attribute name="DESIGNER" value="nerdvellous"/>
 </part>
