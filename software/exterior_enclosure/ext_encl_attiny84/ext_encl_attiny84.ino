@@ -1,26 +1,66 @@
+/**
+ * Project : house-manager
+ * File : ext_encl_attiny84.ino
+ * This is the program run by the attiny84 in the exterior enclosure.
+ * It receives commands from the control panel and send the exterior temperature
+ * if needed.
+ *
+ * Copyright (C) 2014 nerdvellous
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
 #include <SoftwareSerial.h>
 
 /*
- * Port série de liaison avec la carte principale
+ * Serial communication with the main board
  */
 SoftwareSerial comm(9, 8); // RX, TX
 
 /*
- * Définitions des pins
+ * pin mapping
  */
-#define REDPin 5    // RED pin of the LED to PWM pin 4
-#define GREENPin 3  // GREEN pin of the LED to PWM pin 5
-#define BLUEPin 4   // BLUE pin of the LED to PWM pin 6
-#define TEMPPin A3   // BLUE pin of the LED to PWM pin 6
+#define REDPin 5    // red pin (PWM)
+#define GREENPin 3  // green pin (PWM)
+#define BLUEPin 4   // blue pin (PWM)
+#define BUZZPin 6  // temperature sensor
+#define TEMPPin A3  // temperature sensor
 
 /*
- * Get the tempetrature from sensor
+ * color mapping
+ */
+unsigned char color_mapping[6][3] = {
+  {0,0,0}, // 0 : none
+  {255,0,0}, // 1 : red
+  {0,255,0}, // 2 : green
+  {0,0,255}, // 3 : blue
+  {255,50,0}, // 4 : yellow
+  {255,255,255}, // 5 : white
+};
+
+/*
+ * Get the tempetrature from the sensor (in celsius).
+ * If the temperature is negative, the function returns
+ * the additive inverse of the value plus 100.
+ * For instance -7 will become 107.
  */
 char get_temp() {
   int sensorValue = analogRead(TEMPPin);
   float voltage = sensorValue * 5;
   voltage /= 1024.0;
-  float temperatureC = (voltage - 0.5) * 100 ; 
+  float temperatureC = (voltage - 0.5) * 100; 
   
   if (temperatureC < 0) {
     return temperatureC*-1+100;
@@ -29,59 +69,58 @@ char get_temp() {
   }
 }
 
-void red() {
-  analogWrite(REDPin, 255);
-  analogWrite(GREENPin, 0);
-  analogWrite(BLUEPin, 0);
+/*
+ * Manage the led
+ */
+void led(unsigned char rgb[]) {
+  analogWrite(REDPin, rgb[0]);
+  analogWrite(GREENPin, rgb[1]);
+  analogWrite(BLUEPin, rgb[2]);
 }
 
-void green() {
-  analogWrite(REDPin, 0);
-  analogWrite(GREENPin, 255);
-  analogWrite(BLUEPin, 0);
+/*
+ * Buzz
+ */
+void buzz() {
+  digitalWrite(BUZZPin, HIGH);
+  delay(200);
+  digitalWrite(BUZZPin, LOW); 
 }
 
-void blue() {
-  analogWrite(REDPin, 0);
-  analogWrite(GREENPin, 0);
-  analogWrite(BLUEPin, 255);
-}
-
-void yellow() {
-  analogWrite(REDPin, 255);
-  analogWrite(GREENPin, 50);
-  analogWrite(BLUEPin, 0);
-}
-
-void white() {
-  analogWrite(REDPin, 255);
-  analogWrite(GREENPin, 255);
-  analogWrite(BLUEPin, 255);
-}
-
-void setup()
-{
+// SETUP
+void setup() {
   comm.begin(9600);
   pinMode(REDPin, OUTPUT);
   pinMode(GREENPin, OUTPUT);
   pinMode(BLUEPin, OUTPUT);
+  pinMode(BUZZPin, OUTPUT);
   analogReference(DEFAULT);
 }
 
-void loop() // run over and over
-{
+// LOOP
+/* Command list :
+ * r : led to red
+ * g : led to green
+ * b : led to blue
+ * y : led to yellow
+ * w : led to white
+ * n : led faded
+ */
+void loop() {
   if (comm.available()) {
     char command = comm.read();
     if (command == 'r') {
-      red();
+      led(color_mapping[1]);
     } else if (command == 'g') {
-      green();
+      led(color_mapping[2]);
     } else if (command == 'b') {
-      blue();
+      led(color_mapping[3]);
     } else if (command == 'y') {
-      yellow();
+      led(color_mapping[4]);
     } else if (command == 'w') {
-      white();
+      led(color_mapping[5]);
+    } else if (command == 'z') {
+      buzz();
     } else if (command == 't') {
       comm.println(get_temp(), DEC); 
     }

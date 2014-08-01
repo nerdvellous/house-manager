@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,17 +39,17 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -255,7 +255,7 @@ Commonly used for small ceramic capacitors. Like the 0.1uF or 22pF caps.</descri
 <pad name="1" x="1.27" y="0" drill="0.7" diameter="1.651" shape="square"/>
 <text x="-2.032" y="-4.699" size="1.016" layer="25" font="vector">&gt;Name</text>
 </package>
-<package name="CPOL-RADIAL-1000UF-25V">
+<package name="CPOL-RADIAL-1000UF-32V">
 <wire x1="-1.905" y1="1.27" x2="-3.175" y2="1.27" width="0.2032" layer="21"/>
 <circle x="0" y="0" radius="5.461" width="0.2032" layer="21"/>
 <pad name="-" x="-2.54" y="0" drill="0.9" diameter="1.9304"/>
@@ -334,10 +334,21 @@ Commonly used for small ceramic capacitors. Like the 0.1uF or 22pF caps.</descri
 <gate name="G$1" symbol="CAPACITOR_POL" x="0" y="5.08"/>
 </gates>
 <devices>
-<device name="" package="CPOL-RADIAL-1000UF-25V">
+<device name="35V" package="CPOL-RADIAL-1000UF-32V">
 <connects>
 <connect gate="G$1" pin="+" pad="+"/>
 <connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="VALUE" value="1000uF" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="16V" package="CPOL-RADIAL-100UF-25V">
+<connects>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
 </connects>
 <technologies>
 <technology name="">
@@ -2400,8 +2411,8 @@ Commonly used for small ceramic capacitors. Like the 0.1uF or 22pF caps.</descri
 <wire x1="3.429" y1="2.286" x2="-3.429" y2="2.286" width="0.2032" layer="21"/>
 <wire x1="3.429" y1="2.286" x2="3.429" y2="-2.286" width="0.2032" layer="21" curve="-180"/>
 <wire x1="-3.429" y1="2.286" x2="-3.429" y2="-2.286" width="0.2032" layer="21" curve="180"/>
-<pad name="1" x="-2.54" y="0" drill="0.7" diameter="1.651" rot="R90"/>
-<pad name="2" x="2.54" y="0" drill="0.7" diameter="1.651" rot="R90"/>
+<pad name="1" x="-2.54" y="0" drill="0.7" diameter="1.9304" rot="R90"/>
+<pad name="2" x="2.54" y="0" drill="0.7" diameter="1.9304" rot="R90"/>
 <text x="-5.08" y="-3.937" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-5.08" y="2.667" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 </package>
@@ -3922,41 +3933,21 @@ SDR0403-560KL - 56uH, 10%, 500mA RMS/740mA peak</description>
 <library name="nerdvellous-power">
 <packages>
 <package name="TO-220-5PIN">
-<wire x1="-5.08" y1="2.8702" x2="5.08" y2="2.8702" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="2.8702" x2="6.35" y2="2.8702" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="2.8702" x2="-5.08" y2="1.6002" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="1.6002" x2="-5.08" y2="-0.9398" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-0.9398" x2="-4.826" y2="-1.7018" width="0.127" layer="21"/>
-<wire x1="-4.826" y1="-1.7018" x2="4.8006" y2="-1.7018" width="0.127" layer="21"/>
-<wire x1="4.826" y1="-1.7018" x2="5.08" y2="-0.9398" width="0.127" layer="21"/>
-<wire x1="5.08" y1="-0.9398" x2="5.08" y2="1.6002" width="0.127" layer="21"/>
-<wire x1="5.08" y1="1.6002" x2="5.08" y2="2.8702" width="0.127" layer="21"/>
-<wire x1="-5.08" y1="1.6002" x2="5.08" y2="1.6002" width="0.127" layer="21"/>
-<wire x1="-0.3302" y1="-0.127" x2="-0.3302" y2="0.127" width="0.127" layer="51"/>
-<wire x1="-0.3302" y1="0.127" x2="0.3302" y2="0.127" width="0.127" layer="51"/>
-<wire x1="0.3302" y1="0.127" x2="0.3302" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="-0.3302" y1="-0.127" x2="0.3302" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="1.1176" y1="-0.127" x2="1.1176" y2="0.127" width="0.127" layer="51"/>
-<wire x1="1.1176" y1="0.127" x2="1.778" y2="0.127" width="0.127" layer="51"/>
-<wire x1="1.778" y1="0.127" x2="1.778" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="1.1176" y1="-0.127" x2="1.778" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="2.5654" y1="-0.127" x2="2.5654" y2="0.127" width="0.127" layer="51"/>
-<wire x1="2.5654" y1="0.127" x2="3.2258" y2="0.127" width="0.127" layer="51"/>
-<wire x1="3.2258" y1="0.127" x2="3.2258" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="2.5654" y1="-0.127" x2="3.2258" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="-3.2258" y1="-0.127" x2="-3.2258" y2="0.127" width="0.127" layer="51"/>
-<wire x1="-3.2258" y1="0.127" x2="-2.5654" y2="0.127" width="0.127" layer="51"/>
-<wire x1="-2.5654" y1="0.127" x2="-2.5654" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="-3.2258" y1="-0.127" x2="-2.5654" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="-1.778" y1="-0.127" x2="-1.778" y2="0.127" width="0.127" layer="51"/>
-<wire x1="-1.778" y1="0.127" x2="-1.1176" y2="0.127" width="0.127" layer="51"/>
-<wire x1="-1.1176" y1="0.127" x2="-1.1176" y2="-0.127" width="0.127" layer="51"/>
-<wire x1="-1.778" y1="-0.127" x2="-1.1176" y2="-0.127" width="0.127" layer="51"/>
+<wire x1="-4.826" y1="-1.7018" x2="6.0706" y2="-1.7018" width="0.127" layer="21"/>
+<wire x1="6.096" y1="-1.7018" x2="6.35" y2="-0.9398" width="0.127" layer="21"/>
+<wire x1="6.35" y1="-0.9398" x2="6.35" y2="1.6002" width="0.127" layer="21"/>
+<wire x1="6.35" y1="1.6002" x2="6.35" y2="2.8702" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="1.6002" x2="6.35" y2="1.6002" width="0.127" layer="21"/>
 <circle x="-4.064" y="-0.6858" radius="0.0508" width="0.8128" layer="21"/>
 <pad name="P$1" x="-2.8956" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270" thermals="no"/>
-<pad name="P$2" x="-1.4478" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
-<pad name="P$3" x="0" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
-<pad name="P$4" x="1.4478" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
-<pad name="P$5" x="2.8956" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
+<pad name="P$2" x="-1.1478" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
+<pad name="P$3" x="0.5" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
+<pad name="P$4" x="2.1478" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
+<pad name="P$5" x="3.8956" y="0" drill="0.9" diameter="1.016" shape="long" rot="R270"/>
 <text x="-4.445" y="3.175" size="1.016" layer="25" font="vector">&gt;NAME</text>
 <text x="-3.175" y="-3.175" size="1.016" layer="27" font="vector">&gt;VALUE</text>
 </package>
@@ -4805,9 +4796,9 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="-4.191" y1="-1.27" x2="-3.81" y2="-1.27" width="0.2032" layer="21"/>
 <wire x1="4.191" y1="-1.27" x2="3.81" y2="-1.27" width="0.2032" layer="21"/>
 <rectangle x1="-5.08" y1="2.032" x2="5.08" y2="3.048" layer="21"/>
-<pad name="1" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" diameter="1.6764" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" diameter="1.6764" shape="long" rot="R90"/>
 <text x="-2.794" y="3.429" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.302" y="-3.302" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
@@ -6089,7 +6080,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="GND14" library="nerdvellous-schematics" deviceset="GND" device=""/>
 <part name="Y2" library="nerdvellous-electromechanical" deviceset="CRYSTAL" device="TC26V" value="32.786kHz"/>
 <part name="GND15" library="nerdvellous-schematics" deviceset="GND" device=""/>
-<part name="C5" library="nerdvellous-capacitors" deviceset="CAP-1000UF" device="" value="1000uF"/>
+<part name="C5" library="nerdvellous-capacitors" deviceset="CAP-1000UF" device="16V" value="1000uF"/>
 <part name="BAT1" library="nerdvellous-electromechanical" deviceset="BATTERY" device="12MMFULLPTH"/>
 <part name="LED1" library="nerdvellous-led" deviceset="LED" device="5MM" value="RED"/>
 <part name="GND16" library="nerdvellous-schematics" deviceset="GND" device=""/>
