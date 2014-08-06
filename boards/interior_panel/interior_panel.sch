@@ -5429,8 +5429,8 @@ This is the through-hole version of this chip.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="RES-180OHM" prefix="R" uservalue="yes">
-<description>180 Ohm resistor</description>
+<deviceset name="RES-100OHM" prefix="R" uservalue="yes">
+<description>100 Ohm resistor</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
@@ -5442,7 +5442,7 @@ This is the through-hole version of this chip.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="VALUE" value="180 Ohm" constant="no"/>
+<attribute name="VALUE" value="150 Ohm" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -5453,7 +5453,7 @@ This is the through-hole version of this chip.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="VALUE" value="180 Ohm" constant="no"/>
+<attribute name="VALUE" value="100 Ohm" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -5464,7 +5464,7 @@ This is the through-hole version of this chip.</description>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="VALUE" value="180 Ohm" constant="no"/>
+<attribute name="VALUE" value="150 Ohm" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -6035,6 +6035,8 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="power5V" width="0.8128" drill="0">
+</class>
 </classes>
 <parts>
 <part name="FRAME1" library="nerdvellous_schematics" deviceset="FRAME-A4L" device=""/>
@@ -6052,7 +6054,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="GND6" library="nerdvellous_schematics" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="nerdvellous_schematics" deviceset="12V" device=""/>
 <part name="Q1" library="nerdvellous-transistors" deviceset="MOSFET-NCHANNEL" device="FQP30N06L"/>
-<part name="JP1" library="nerdvellous-connectors" deviceset="M02" device="JST-PTH-VERT"/>
+<part name="JP1" library="nerdvellous-connectors" deviceset="M02" device="PTH" value="M02PTH"/>
 <part name="SUPPLY4" library="nerdvellous-schematics" deviceset="12V" device=""/>
 <part name="GND7" library="nerdvellous-schematics" deviceset="GND" device=""/>
 <part name="D2" library="nerdvellous-passive" deviceset="1N4004" device=""/>
@@ -6084,7 +6086,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="BAT1" library="nerdvellous-electromechanical" deviceset="BATTERY" device="12MMFULLPTH"/>
 <part name="LED1" library="nerdvellous-led" deviceset="LED" device="5MM" value="RED"/>
 <part name="GND16" library="nerdvellous-schematics" deviceset="GND" device=""/>
-<part name="R3" library="nerdvellous-resistors" deviceset="RES-180OHM" device="" value="180 Ohm"/>
+<part name="R3" library="nerdvellous-resistors" deviceset="RES-100OHM" device="" value="100 Ohm"/>
 <part name="SUPPLY12" library="nerdvellous-schematics" deviceset="5V" device=""/>
 <part name="C2" library="nerdvellous-capacitors" deviceset="CAP-0.1UF" device="" value="0.1uF"/>
 <part name="SUPPLY13" library="nerdvellous-schematics" deviceset="5V" device=""/>
@@ -6397,7 +6399,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <junction x="68.58" y="134.62"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="5V" class="1">
 <segment>
 <pinref part="L1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY2" gate="G$1" pin="5V"/>
