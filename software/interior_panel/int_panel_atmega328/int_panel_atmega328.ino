@@ -11,14 +11,10 @@
 #define DS1307_I2C_ADDRESS 0x68  // This is the I2C address
 
 /*
- * Définitions des pins
+ * PIN definition
  */
-#define BUZZPin 6
-#define REDPin 9    // RED pin of the LED to PWM pin 4
-#define GREENPin 10  // GREEN pin of the LED to PWM pin 5
-#define BLUEPin 11   // BLUE pin of the LED to PWM pin 6
-#define DOORPin 8
-#define BTNPin 2
+#define DOORPin 7
+#define BTNPin 9
 
 
 /*
@@ -34,7 +30,12 @@ Picaso_Serial_4DLib Display(&DisplaySerial);
 /*
  * Port de liaison série avec le lecteur RFID
  */
-SoftwareSerial RFIDSerial(12, 13); // RX, TX
+SoftwareSerial RFIDSerial(12, 8); // RX, TX
+
+/*
+ * Port de liaison série avec le lecteur RFID
+ */
+SoftwareSerial EXTSerial(10, 11); // RX, TX
 
 /*
  * handle for display model
@@ -142,10 +143,7 @@ void launch_timer() {
  * Display the error status on the led
  */
 void error() {
-  digitalWrite(DOORPin, LOW);
-  analogWrite(REDPin, 255);
-  analogWrite(GREENPin, 0);
-  analogWrite(BLUEPin, 0);
+  EXTSerial.print('r');
   launch_timer();
 }
 
@@ -154,12 +152,8 @@ void error() {
  */
 void success(boolean auto_clear = true) {
   digitalWrite(DOORPin, HIGH);
-  analogWrite(REDPin, 0);
-  analogWrite(GREENPin, 255);
-  analogWrite(BLUEPin, 0);
-  analogWrite(BUZZPin, 255);
-  delay(200);
-  analogWrite(BUZZPin, 0);
+  EXTSerial.print('g');
+  EXTSerial.print('z');
   if (auto_clear) {
     launch_timer();
   }
@@ -169,21 +163,16 @@ void success(boolean auto_clear = true) {
  * Display the standing by status on the led
  */
 void standby() {
-  current_timer_id = 0;
-  analogWrite(BUZZPin, 0);
   digitalWrite(DOORPin, LOW);
-  analogWrite(REDPin, 0);
-  analogWrite(GREENPin, 150);
-  analogWrite(BLUEPin, 255);
+  current_timer_id = 0;
+  EXTSerial.print('b');
 }
 
 /*
  * Display the waiting status on the led
  */
 void waiting() {
-  analogWrite(REDPin, 255);
-  analogWrite(GREENPin, 50);
-  analogWrite(BLUEPin, 0);
+  EXTSerial.print('y');
 }
 
 /*
@@ -302,7 +291,8 @@ void send_value(char command, char value) {
  * Send the temperature to the screen
  */
 void send_temp() {
-  send_value('t', get_temp());
+  char temp = get_temp();
+  send_value('t', temp);
 }
 
 /*
@@ -326,17 +316,14 @@ void send_date() {
 /*
  * Get the tempetrature from sensor
  */
-char get_temp() {
-  int sensorValue = analogRead(A0);
-  float voltage = sensorValue * 3.3;
-  voltage /= 1024.0;
-  float temperatureC = (voltage - 0.5) * 100 ; 
-  
-  if (temperatureC < 0) {
-    return temperatureC*-1+100;
-  } else {
-    return temperatureC;
+byte get_temp() {
+  EXTSerial.print('t');
+  delay(100);
+  byte rx = 0;
+  while (EXTSerial.available()) {
+      rx = (byte)EXTSerial.read();
   }
+  return rx;
 }
 
 /* 
@@ -391,13 +378,12 @@ void refresh_data() {
 void setup()
 {
   // Initialize pins
-  pinMode(BUZZPin, OUTPUT);
-  pinMode(REDPin, OUTPUT);
-  pinMode(GREENPin, OUTPUT);
-  pinMode(BLUEPin, OUTPUT);
   pinMode(DOORPin, OUTPUT);
   pinMode(BTNPin, INPUT_PULLUP);
-  analogReference(EXTERNAL);
+  analogReference(DEFAULT);
+  
+  // Initialize RFID
+  EXTSerial.begin(9600);
   
   // Initialize RFID
   RFIDSerial.begin(9600);
@@ -406,7 +392,7 @@ void setup()
   Wire.begin();
   
   // Initialize screen
-  delay(2000);
+  delay(1000);
   DisplaySerial.begin(9600);
   Display.TimeLimit4D = 2000;
   Display.gfx_Cls();
