@@ -47,7 +47,7 @@ unsigned char color_mapping[6][3] = {
   {0,255,0}, // 2 : green
   {0,0,255}, // 3 : blue
   {255,50,0}, // 4 : yellow
-  {255,255,255}, // 5 : white
+  {255,255,150}, // 5 : white
 };
 
 /*
@@ -83,7 +83,7 @@ void led(unsigned char rgb[]) {
  */
 void buzz() {
   digitalWrite(BUZZPin, HIGH);
-  delay(200);
+  delay(400);
   digitalWrite(BUZZPin, LOW); 
 }
 
@@ -119,10 +119,12 @@ void loop() {
       led(color_mapping[4]);
     } else if (command == 'w') {
       led(color_mapping[5]);
+    } else if (command == 'n') {
+      led(color_mapping[0]);
     } else if (command == 'z') {
       buzz();
     } else if (command == 't') {
-      comm.println(get_temp(), DEC); 
+      comm.write(get_temp()); 
     }
   }
 }
